@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{705A15FC-62D2-45A3-8C7D-EB5F7DF27EC8}</ProjectGuid>
+    <ProjectGuid>{D3A6D52F-AD5F-4CC4-B57D-1F461F3DB20F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Labb1</RootNamespace>
-    <AssemblyName>Labb1</AssemblyName>
+    <RootNamespace>MyWeather</RootNamespace>
+    <AssemblyName>MyWeather</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -75,15 +75,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Hallo.asmx" />
+    <Content Include="Global.asax" />
+    <Content Include="Weather_webform.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hallo.asmx.cs">
-      <DependentUpon>Hallo.asmx</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Weather_webform.aspx.cs">
+      <DependentUpon>Weather_webform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Weather_webform.aspx.designer.cs">
+      <DependentUpon>Weather_webform.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -98,9 +112,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>45230</DevelopmentServerPort>
+          <DevelopmentServerPort>45674</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:45230/</IISUrl>
+          <IISUrl>http://localhost:45674/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -18,9 +18,10 @@ namespace Labb1
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public string Weather()
         {
-            return "Hello World";
+            var value = "Imorgon blir det sol";
+            return value;
         }
     }
 }
