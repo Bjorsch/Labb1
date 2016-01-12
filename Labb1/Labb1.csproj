@@ -75,10 +75,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Adderar2Tal.asmx" />
     <Content Include="Hallo.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adderar2Tal.asmx.cs">
+      <DependentUpon>Adderar2Tal.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Hallo.asmx.cs">
       <DependentUpon>Hallo.asmx</DependentUpon>
       <SubType>Component</SubType>

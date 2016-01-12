@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MyWeather.WeatherRef;
+using MyWeather.add2numbers;
 
 namespace MyWeather
 {
-    public partial class Weather_webform : System.Web.UI.Page
+    public partial class AddTwoNr : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,8 +17,8 @@ namespace MyWeather
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            HalloSoapClient client = new HalloSoapClient();
-            Label1.Text = client.Weather();
+            Adderar2TalSoapClient client = new Adderar2TalSoapClient();
+            Label1.Text = client.PlusaIhop(TextBox1.Text, TextBox2.Text);
         }
     }
 }

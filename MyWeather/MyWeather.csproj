@@ -77,10 +77,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddTwoNr.aspx" />
     <Content Include="Global.asax" />
+    <None Include="Service References\add2numbers\Adderar2Tal.wsdl" />
+    <Content Include="Service References\add2numbers\MyWeather.add2numbers.PlusaIhopResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\WeatherRef\Hallo.disco" />
     <None Include="Service References\WeatherRef\configuration91.svcinfo" />
     <None Include="Service References\WeatherRef\configuration.svcinfo" />
+    <None Include="Service References\add2numbers\Adderar2Tal.disco" />
+    <None Include="Service References\add2numbers\configuration91.svcinfo" />
+    <None Include="Service References\add2numbers\configuration.svcinfo" />
+    <None Include="Service References\add2numbers\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\WeatherRef\MyWeather.WeatherRef.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -96,10 +108,22 @@
     <None Include="Service References\WeatherRef\Hallo.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTwoNr.aspx.cs">
+      <DependentUpon>AddTwoNr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTwoNr.aspx.designer.cs">
+      <DependentUpon>AddTwoNr.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\add2numbers\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\WeatherRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,6 +145,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\add2numbers\" />
     <WCFMetadataStorage Include="Service References\WeatherRef\" />
   </ItemGroup>
   <PropertyGroup>
