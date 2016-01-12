@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb1", "Labb1\Labb1.csproj", "{705A15FC-62D2-45A3-8C7D-EB5F7DF27EC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWeather", "MyWeather\MyWeather.csproj", "{D3A6D52F-AD5F-4CC4-B57D-1F461F3DB20F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{705A15FC-62D2-45A3-8C7D-EB5F7DF27EC8} = {705A15FC-62D2-45A3-8C7D-EB5F7DF27EC8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
