@@ -15,80 +15,12 @@ namespace MyWeather.WeatherRef {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WeatherRef.HalloSoap")]
     public interface HalloSoap {
         
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        MyWeather.WeatherRef.HelloWorldResponse HelloWorld(MyWeather.WeatherRef.HelloWorldRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<MyWeather.WeatherRef.HelloWorldResponse> HelloWorldAsync(MyWeather.WeatherRef.HelloWorldRequest request);
-        
         // CODEGEN: Generating message contract since element name WeatherResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Weather", ReplyAction="*")]
         MyWeather.WeatherRef.WeatherResponse Weather(MyWeather.WeatherRef.WeatherRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Weather", ReplyAction="*")]
         System.Threading.Tasks.Task<MyWeather.WeatherRef.WeatherResponse> WeatherAsync(MyWeather.WeatherRef.WeatherRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://tempuri.org/", Order=0)]
-        public MyWeather.WeatherRef.HelloWorldRequestBody Body;
-        
-        public HelloWorldRequest() {
-        }
-        
-        public HelloWorldRequest(MyWeather.WeatherRef.HelloWorldRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody {
-        
-        public HelloWorldRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://tempuri.org/", Order=0)]
-        public MyWeather.WeatherRef.HelloWorldResponseBody Body;
-        
-        public HelloWorldResponse() {
-        }
-        
-        public HelloWorldResponse(MyWeather.WeatherRef.HelloWorldResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class HelloWorldResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
-        
-        public HelloWorldResponseBody() {
-        }
-        
-        public HelloWorldResponseBody(string HelloWorldResult) {
-            this.HelloWorldResult = HelloWorldResult;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -177,29 +109,6 @@ namespace MyWeather.WeatherRef {
         
         public HalloSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MyWeather.WeatherRef.HelloWorldResponse MyWeather.WeatherRef.HalloSoap.HelloWorld(MyWeather.WeatherRef.HelloWorldRequest request) {
-            return base.Channel.HelloWorld(request);
-        }
-        
-        public string HelloWorld() {
-            MyWeather.WeatherRef.HelloWorldRequest inValue = new MyWeather.WeatherRef.HelloWorldRequest();
-            inValue.Body = new MyWeather.WeatherRef.HelloWorldRequestBody();
-            MyWeather.WeatherRef.HelloWorldResponse retVal = ((MyWeather.WeatherRef.HalloSoap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<MyWeather.WeatherRef.HelloWorldResponse> MyWeather.WeatherRef.HalloSoap.HelloWorldAsync(MyWeather.WeatherRef.HelloWorldRequest request) {
-            return base.Channel.HelloWorldAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<MyWeather.WeatherRef.HelloWorldResponse> HelloWorldAsync() {
-            MyWeather.WeatherRef.HelloWorldRequest inValue = new MyWeather.WeatherRef.HelloWorldRequest();
-            inValue.Body = new MyWeather.WeatherRef.HelloWorldRequestBody();
-            return ((MyWeather.WeatherRef.HalloSoap)(this)).HelloWorldAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

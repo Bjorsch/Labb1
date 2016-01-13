@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdderaTreTal.asmx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -82,6 +83,10 @@
   <ItemGroup>
     <Compile Include="Adderar2Tal.asmx.cs">
       <DependentUpon>Adderar2Tal.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdderaTreTal.asmx.cs">
+      <DependentUpon>AdderaTreTal.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Hallo.asmx.cs">
