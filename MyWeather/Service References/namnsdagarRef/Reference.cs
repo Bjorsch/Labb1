@@ -15,7 +15,7 @@ namespace MyWeather.namnsdagarRef {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="namnsdagarRef.NamnsdagarSoap")]
     public interface NamnsdagarSoap {
         
-        // CODEGEN: Generating message contract since element name name from namespace http://tempuri.org/ is not marked nillable
+        // CODEGEN: Generating message contract since element name input from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/NamnsdagarMetod", ReplyAction="*")]
         MyWeather.namnsdagarRef.NamnsdagarMetodResponse NamnsdagarMetod(MyWeather.namnsdagarRef.NamnsdagarMetodRequest request);
         
@@ -47,13 +47,13 @@ namespace MyWeather.namnsdagarRef {
     public partial class NamnsdagarMetodRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string name;
+        public string input;
         
         public NamnsdagarMetodRequestBody() {
         }
         
-        public NamnsdagarMetodRequestBody(string name) {
-            this.name = name;
+        public NamnsdagarMetodRequestBody(string input) {
+            this.input = input;
         }
     }
     
@@ -123,10 +123,10 @@ namespace MyWeather.namnsdagarRef {
             return base.Channel.NamnsdagarMetod(request);
         }
         
-        public string NamnsdagarMetod(string name) {
+        public string NamnsdagarMetod(string input) {
             MyWeather.namnsdagarRef.NamnsdagarMetodRequest inValue = new MyWeather.namnsdagarRef.NamnsdagarMetodRequest();
             inValue.Body = new MyWeather.namnsdagarRef.NamnsdagarMetodRequestBody();
-            inValue.Body.name = name;
+            inValue.Body.input = input;
             MyWeather.namnsdagarRef.NamnsdagarMetodResponse retVal = ((MyWeather.namnsdagarRef.NamnsdagarSoap)(this)).NamnsdagarMetod(inValue);
             return retVal.Body.NamnsdagarMetodResult;
         }
@@ -136,10 +136,10 @@ namespace MyWeather.namnsdagarRef {
             return base.Channel.NamnsdagarMetodAsync(request);
         }
         
-        public System.Threading.Tasks.Task<MyWeather.namnsdagarRef.NamnsdagarMetodResponse> NamnsdagarMetodAsync(string name) {
+        public System.Threading.Tasks.Task<MyWeather.namnsdagarRef.NamnsdagarMetodResponse> NamnsdagarMetodAsync(string input) {
             MyWeather.namnsdagarRef.NamnsdagarMetodRequest inValue = new MyWeather.namnsdagarRef.NamnsdagarMetodRequest();
             inValue.Body = new MyWeather.namnsdagarRef.NamnsdagarMetodRequestBody();
-            inValue.Body.name = name;
+            inValue.Body.input = input;
             return ((MyWeather.namnsdagarRef.NamnsdagarSoap)(this)).NamnsdagarMetodAsync(inValue);
         }
     }
