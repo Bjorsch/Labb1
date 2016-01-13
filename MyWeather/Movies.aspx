@@ -9,9 +9,10 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label><br/>
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        <h3>Skriv in en filmtitel för att se när den gjordes</h3>
+        <asp:TextBox ID="TextBox1" runat="server" placeHolder="Titel"></asp:TextBox>
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label><br/><br/>
+        <asp:Button ID="Button1" runat="server" Text="Resultat" OnClick="Button1_Click" />
     </div>
     </form>
 </body>

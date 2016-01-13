@@ -22,12 +22,11 @@ namespace Labb1
         {
             var textFile = System.IO.File.ReadAllLines(@"C:\Skola\WCF\GitHub\Labb1\MyWeather\Movies.txt");
             var text = "";
-            var kalle = textbox.Replace(" ", "");
+            var theTrim = textbox.Replace(" ", "");
             for (int i = 0; i < textFile.Length; i++)
             {
-
                 var movie = textFile[i].Replace(" ","").Split(',');
-                if (movie.Contains(kalle))
+                if (movie.Contains(theTrim))
                 {
                     text = "År: " + movie[0];
                 }
