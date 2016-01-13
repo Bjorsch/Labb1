@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="NamnsdagarMetod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NamnsdagarMetodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NamnsdagarMetodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NamnsdagarMetodSoapIn">
+    <wsdl:part name="parameters" element="tns:NamnsdagarMetod" />
+  </wsdl:message>
+  <wsdl:message name="NamnsdagarMetodSoapOut">
+    <wsdl:part name="parameters" element="tns:NamnsdagarMetodResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NamnsdagarSoap">
+    <wsdl:operation name="NamnsdagarMetod">
+      <wsdl:input message="tns:NamnsdagarMetodSoapIn" />
+      <wsdl:output message="tns:NamnsdagarMetodSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NamnsdagarSoap" type="tns:NamnsdagarSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NamnsdagarMetod">
+      <soap:operation soapAction="http://tempuri.org/NamnsdagarMetod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NamnsdagarSoap12" type="tns:NamnsdagarSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NamnsdagarMetod">
+      <soap12:operation soapAction="http://tempuri.org/NamnsdagarMetod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Namnsdagar">
+    <wsdl:port name="NamnsdagarSoap" binding="tns:NamnsdagarSoap">
+      <soap:address location="http://localhost:45230/Namnsdagar.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NamnsdagarSoap12" binding="tns:NamnsdagarSoap12">
+      <soap12:address location="http://localhost:45230/Namnsdagar.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
