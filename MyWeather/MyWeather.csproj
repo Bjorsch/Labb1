@@ -73,6 +73,10 @@
     <Content Include="Service References\AdderarTreTalRef\MyWeather.AdderarTreTalRef.AdderaTreTalMetodResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\SupTvaTalRef\MyWeather.SupTvaTalRef.SupTvatalMetodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\SupTvaTalRef\SupTvaTal.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -104,6 +108,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\SupTvaTalRef\SupTvaTal.disco" />
+    <None Include="Service References\SupTvaTalRef\configuration91.svcinfo" />
+    <None Include="Service References\SupTvaTalRef\configuration.svcinfo" />
+    <None Include="Service References\SupTvaTalRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\WeatherRef\MyWeather.WeatherRef.WeatherResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -111,6 +122,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="SupTvaTal.aspx" />
     <Content Include="TreTal.aspx" />
     <Content Include="Weather_webform.aspx" />
     <Content Include="Web.config" />
@@ -138,10 +150,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\SupTvaTalRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\WeatherRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SupTvaTal.aspx.cs">
+      <DependentUpon>SupTvaTal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupTvaTal.aspx.designer.cs">
+      <DependentUpon>SupTvaTal.aspx</DependentUpon>
     </Compile>
     <Compile Include="TreTal.aspx.cs">
       <DependentUpon>TreTal.aspx</DependentUpon>
@@ -168,6 +192,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\add2numbers\" />
     <WCFMetadataStorage Include="Service References\AdderarTreTalRef\" />
+    <WCFMetadataStorage Include="Service References\SupTvaTalRef\" />
     <WCFMetadataStorage Include="Service References\WeatherRef\" />
   </ItemGroup>
   <PropertyGroup>

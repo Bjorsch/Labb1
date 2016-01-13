@@ -78,6 +78,7 @@
   <ItemGroup>
     <Content Include="Adderar2Tal.asmx" />
     <Content Include="Hallo.asmx" />
+    <Content Include="SupTvaTal.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +95,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupTvaTal.asmx.cs">
+      <DependentUpon>SupTvaTal.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

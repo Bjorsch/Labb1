@@ -18,9 +18,10 @@ namespace Labb1
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public string SupTvatalMetod(string tal1, string tal2)
         {
-            return "Hello World";
+            var calc = (int.Parse(tal1) - int.Parse(tal2)).ToString();
+            return calc;
         }
     }
 }
