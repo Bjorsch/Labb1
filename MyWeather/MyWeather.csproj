@@ -68,6 +68,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Movies.aspx" />
+    <Content Include="Movies.txt" />
     <Content Include="Namnsdagar.aspx" />
     <Content Include="Namnsdagar.txt" />
     <Content Include="packages.config" />
@@ -75,9 +77,20 @@
     <Content Include="Service References\AdderarTreTalRef\MyWeather.AdderarTreTalRef.AdderaTreTalMetodResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\MoviesRef\Movie.disco" />
+    <None Include="Service References\MoviesRef\configuration91.svcinfo" />
+    <None Include="Service References\MoviesRef\configuration.svcinfo" />
+    <Content Include="Service References\MoviesRef\MyWeather.MoviesRef.MoviesMethodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MoviesRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\namnsdagarRef\MyWeather.namnsdagarRef.NamnsdagarMetodResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\MoviesRef\Movie.wsdl" />
     <None Include="Service References\namnsdagarRef\Namnsdagar.disco" />
     <None Include="Service References\namnsdagarRef\configuration91.svcinfo" />
     <None Include="Service References\namnsdagarRef\configuration.svcinfo" />
@@ -152,6 +165,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Movies.aspx.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movies.aspx.designer.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Namnsdagar.aspx.cs">
       <DependentUpon>Namnsdagar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,6 +186,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\AdderarTreTalRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MoviesRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -217,6 +242,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\add2numbers\" />
     <WCFMetadataStorage Include="Service References\AdderarTreTalRef\" />
+    <WCFMetadataStorage Include="Service References\MoviesRef\" />
     <WCFMetadataStorage Include="Service References\namnsdagarRef\" />
     <WCFMetadataStorage Include="Service References\SupTvaTalRef\" />
     <WCFMetadataStorage Include="Service References\WeatherRef\" />
