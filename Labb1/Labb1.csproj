@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="AdderaTreTal.asmx" />
     <Content Include="Movie.asmx" />
+    <Content Include="MovieFromYear.asmx" />
     <Content Include="Namnsdagar.asmx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -98,6 +99,10 @@
     </Compile>
     <Compile Include="Movie.asmx.cs">
       <DependentUpon>Movie.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MovieFromYear.asmx.cs">
+      <DependentUpon>MovieFromYear.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Namnsdagar.asmx.cs">

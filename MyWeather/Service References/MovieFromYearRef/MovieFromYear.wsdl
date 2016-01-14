@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MovieFromYearMothod2012">
+        <s:complexType />
+      </s:element>
+      <s:element name="MovieFromYearMothod2012Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovieFromYearMothod2012Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MovieFromYearMothod2012SoapIn">
+    <wsdl:part name="parameters" element="tns:MovieFromYearMothod2012" />
+  </wsdl:message>
+  <wsdl:message name="MovieFromYearMothod2012SoapOut">
+    <wsdl:part name="parameters" element="tns:MovieFromYearMothod2012Response" />
+  </wsdl:message>
+  <wsdl:portType name="MovieFromYearSoap">
+    <wsdl:operation name="MovieFromYearMothod2012">
+      <wsdl:input message="tns:MovieFromYearMothod2012SoapIn" />
+      <wsdl:output message="tns:MovieFromYearMothod2012SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MovieFromYearSoap" type="tns:MovieFromYearSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MovieFromYearMothod2012">
+      <soap:operation soapAction="http://tempuri.org/MovieFromYearMothod2012" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MovieFromYearSoap12" type="tns:MovieFromYearSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MovieFromYearMothod2012">
+      <soap12:operation soapAction="http://tempuri.org/MovieFromYearMothod2012" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MovieFromYear">
+    <wsdl:port name="MovieFromYearSoap" binding="tns:MovieFromYearSoap">
+      <soap:address location="http://localhost:45230/MovieFromYear.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MovieFromYearSoap12" binding="tns:MovieFromYearSoap12">
+      <soap12:address location="http://localhost:45230/MovieFromYear.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
