@@ -18,7 +18,7 @@ namespace MyWeather
         protected void Button1_Click(object sender, EventArgs e)
         {
             MovieFromYearSoapClient client = new MovieFromYearSoapClient();
-            Label1.Text = client.MovieFromYearMothod2012();
+            TextBox1.Text = client.MovieFromYearMothod2012();
         }
     }
 }

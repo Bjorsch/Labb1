@@ -28,7 +28,7 @@ namespace Labb1
                 var movie = textFile[i].Split(',');
                 if (movie.Contains("2012"))
                 {
-                    text = "År: " + movie[1];
+                    text += movie[1] + "\r\n" ;
                 }
             }
             return text;
