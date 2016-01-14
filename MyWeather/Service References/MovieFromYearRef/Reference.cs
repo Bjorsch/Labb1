@@ -15,54 +15,27 @@ namespace MyWeather.MovieFromYearRef {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MovieFromYearRef.MovieFromYearSoap")]
     public interface MovieFromYearSoap {
         
-        // CODEGEN: Generating message contract since element name MovieFromYearMothod2012Result from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MovieFromYearMothod2012", ReplyAction="*")]
-        MyWeather.MovieFromYearRef.MovieFromYearMothod2012Response MovieFromYearMothod2012(MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request request);
+        // CODEGEN: Generating message contract since element name value from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MovieFromYearMothod", ReplyAction="*")]
+        MyWeather.MovieFromYearRef.MovieFromYearMothodResponse MovieFromYearMothod(MyWeather.MovieFromYearRef.MovieFromYearMothodRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MovieFromYearMothod2012", ReplyAction="*")]
-        System.Threading.Tasks.Task<MyWeather.MovieFromYearRef.MovieFromYearMothod2012Response> MovieFromYearMothod2012Async(MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MovieFromYearMothod", ReplyAction="*")]
+        System.Threading.Tasks.Task<MyWeather.MovieFromYearRef.MovieFromYearMothodResponse> MovieFromYearMothodAsync(MyWeather.MovieFromYearRef.MovieFromYearMothodRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class MovieFromYearMothod2012Request {
+    public partial class MovieFromYearMothodRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="MovieFromYearMothod2012", Namespace="http://tempuri.org/", Order=0)]
-        public MyWeather.MovieFromYearRef.MovieFromYearMothod2012RequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="MovieFromYearMothod", Namespace="http://tempuri.org/", Order=0)]
+        public MyWeather.MovieFromYearRef.MovieFromYearMothodRequestBody Body;
         
-        public MovieFromYearMothod2012Request() {
+        public MovieFromYearMothodRequest() {
         }
         
-        public MovieFromYearMothod2012Request(MyWeather.MovieFromYearRef.MovieFromYearMothod2012RequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class MovieFromYearMothod2012RequestBody {
-        
-        public MovieFromYearMothod2012RequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class MovieFromYearMothod2012Response {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="MovieFromYearMothod2012Response", Namespace="http://tempuri.org/", Order=0)]
-        public MyWeather.MovieFromYearRef.MovieFromYearMothod2012ResponseBody Body;
-        
-        public MovieFromYearMothod2012Response() {
-        }
-        
-        public MovieFromYearMothod2012Response(MyWeather.MovieFromYearRef.MovieFromYearMothod2012ResponseBody Body) {
+        public MovieFromYearMothodRequest(MyWeather.MovieFromYearRef.MovieFromYearMothodRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -71,16 +44,50 @@ namespace MyWeather.MovieFromYearRef {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class MovieFromYearMothod2012ResponseBody {
+    public partial class MovieFromYearMothodRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string MovieFromYearMothod2012Result;
+        public string value;
         
-        public MovieFromYearMothod2012ResponseBody() {
+        public MovieFromYearMothodRequestBody() {
         }
         
-        public MovieFromYearMothod2012ResponseBody(string MovieFromYearMothod2012Result) {
-            this.MovieFromYearMothod2012Result = MovieFromYearMothod2012Result;
+        public MovieFromYearMothodRequestBody(string value) {
+            this.value = value;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class MovieFromYearMothodResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="MovieFromYearMothodResponse", Namespace="http://tempuri.org/", Order=0)]
+        public MyWeather.MovieFromYearRef.MovieFromYearMothodResponseBody Body;
+        
+        public MovieFromYearMothodResponse() {
+        }
+        
+        public MovieFromYearMothodResponse(MyWeather.MovieFromYearRef.MovieFromYearMothodResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class MovieFromYearMothodResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string MovieFromYearMothodResult;
+        
+        public MovieFromYearMothodResponseBody() {
+        }
+        
+        public MovieFromYearMothodResponseBody(string MovieFromYearMothodResult) {
+            this.MovieFromYearMothodResult = MovieFromYearMothodResult;
         }
     }
     
@@ -112,26 +119,28 @@ namespace MyWeather.MovieFromYearRef {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MyWeather.MovieFromYearRef.MovieFromYearMothod2012Response MyWeather.MovieFromYearRef.MovieFromYearSoap.MovieFromYearMothod2012(MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request request) {
-            return base.Channel.MovieFromYearMothod2012(request);
+        MyWeather.MovieFromYearRef.MovieFromYearMothodResponse MyWeather.MovieFromYearRef.MovieFromYearSoap.MovieFromYearMothod(MyWeather.MovieFromYearRef.MovieFromYearMothodRequest request) {
+            return base.Channel.MovieFromYearMothod(request);
         }
         
-        public string MovieFromYearMothod2012() {
-            MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request inValue = new MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request();
-            inValue.Body = new MyWeather.MovieFromYearRef.MovieFromYearMothod2012RequestBody();
-            MyWeather.MovieFromYearRef.MovieFromYearMothod2012Response retVal = ((MyWeather.MovieFromYearRef.MovieFromYearSoap)(this)).MovieFromYearMothod2012(inValue);
-            return retVal.Body.MovieFromYearMothod2012Result;
+        public string MovieFromYearMothod(string value) {
+            MyWeather.MovieFromYearRef.MovieFromYearMothodRequest inValue = new MyWeather.MovieFromYearRef.MovieFromYearMothodRequest();
+            inValue.Body = new MyWeather.MovieFromYearRef.MovieFromYearMothodRequestBody();
+            inValue.Body.value = value;
+            MyWeather.MovieFromYearRef.MovieFromYearMothodResponse retVal = ((MyWeather.MovieFromYearRef.MovieFromYearSoap)(this)).MovieFromYearMothod(inValue);
+            return retVal.Body.MovieFromYearMothodResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<MyWeather.MovieFromYearRef.MovieFromYearMothod2012Response> MyWeather.MovieFromYearRef.MovieFromYearSoap.MovieFromYearMothod2012Async(MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request request) {
-            return base.Channel.MovieFromYearMothod2012Async(request);
+        System.Threading.Tasks.Task<MyWeather.MovieFromYearRef.MovieFromYearMothodResponse> MyWeather.MovieFromYearRef.MovieFromYearSoap.MovieFromYearMothodAsync(MyWeather.MovieFromYearRef.MovieFromYearMothodRequest request) {
+            return base.Channel.MovieFromYearMothodAsync(request);
         }
         
-        public System.Threading.Tasks.Task<MyWeather.MovieFromYearRef.MovieFromYearMothod2012Response> MovieFromYearMothod2012Async() {
-            MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request inValue = new MyWeather.MovieFromYearRef.MovieFromYearMothod2012Request();
-            inValue.Body = new MyWeather.MovieFromYearRef.MovieFromYearMothod2012RequestBody();
-            return ((MyWeather.MovieFromYearRef.MovieFromYearSoap)(this)).MovieFromYearMothod2012Async(inValue);
+        public System.Threading.Tasks.Task<MyWeather.MovieFromYearRef.MovieFromYearMothodResponse> MovieFromYearMothodAsync(string value) {
+            MyWeather.MovieFromYearRef.MovieFromYearMothodRequest inValue = new MyWeather.MovieFromYearRef.MovieFromYearMothodRequest();
+            inValue.Body = new MyWeather.MovieFromYearRef.MovieFromYearMothodRequestBody();
+            inValue.Body.value = value;
+            return ((MyWeather.MovieFromYearRef.MovieFromYearSoap)(this)).MovieFromYearMothodAsync(inValue);
         }
     }
 }

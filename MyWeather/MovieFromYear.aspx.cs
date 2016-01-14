@@ -18,7 +18,25 @@ namespace MyWeather
         protected void Button1_Click(object sender, EventArgs e)
         {
             MovieFromYearSoapClient client = new MovieFromYearSoapClient();
-            TextBox1.Text = client.MovieFromYearMothod2012();
+            TextBox1.Text = client.MovieFromYearMothod("2012");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            MovieFromYearSoapClient client = new MovieFromYearSoapClient();
+            TextBox1.Text = client.MovieFromYearMothod("2013");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            MovieFromYearSoapClient client = new MovieFromYearSoapClient();
+            TextBox1.Text = client.MovieFromYearMothod("2014");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            MovieFromYearSoapClient client = new MovieFromYearSoapClient();
+            TextBox1.Text = client.MovieFromYearMothod("2015");
         }
     }
 }

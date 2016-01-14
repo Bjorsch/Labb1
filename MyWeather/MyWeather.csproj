@@ -79,7 +79,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\MovieFromYearRef\MovieFromYear.wsdl" />
-    <Content Include="Service References\MovieFromYearRef\MyWeather.MovieFromYearRef.MovieFromYearMothod2012Response.datasource">
+    <Content Include="Service References\MovieFromYearRef\MyWeather.MovieFromYearRef.MovieFromYearMothodResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\MoviesRef\Movie.disco" />

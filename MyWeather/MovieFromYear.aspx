@@ -10,10 +10,11 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <h3>Se vilka filmer som kom ut ett visst årtal</h3>
         <asp:Button ID="Button1" runat="server" Text="2012" OnClick="Button1_Click"/>
-        <asp:Button ID="Button2" runat="server" Text="2013" />
-        <asp:Button ID="Button3" runat="server" Text="2014" />
-        <asp:Button ID="Button4" runat="server" Text="2015" />   
+        <asp:Button ID="Button2" runat="server" Text="2013" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" Text="2014" OnClick="Button3_Click" />
+        <asp:Button ID="Button4" runat="server" Text="2015" OnClick="Button4_Click" />   
         <br/>
         <br/>     
         <%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>

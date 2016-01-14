@@ -18,7 +18,7 @@ namespace Labb1
     {
 
         [WebMethod]
-        public string MovieFromYearMothod2012()
+        public string MovieFromYearMothod(string value)
         {
             var textFile = System.IO.File.ReadAllLines(@"C:\Skola\WCF\GitHub\Labb1\MyWeather\Movies.txt");
             var text = "";
@@ -26,7 +26,7 @@ namespace Labb1
             for (int i = 0; i < textFile.Length; i++)
             {
                 var movie = textFile[i].Split(',');
-                if (movie.Contains("2012"))
+                if (movie.Contains(value))
                 {
                     text += movie[1] + "\r\n" ;
                 }
